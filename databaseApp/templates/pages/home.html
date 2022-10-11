@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{% static 'static/style.css' %}">
     <title>Blog</title>
 </head>
 <body>
@@ -25,49 +26,23 @@
     </header>
     <section>
         <h1 class="name">Design Tools</h1>
-        <hr>
-        <div class="all">
-            <div class="card">
-                <div class="text">
-                    <div class="row">
-                        <div class="tools"><p class="tool-name">Design tools</p></div>
-                        <div class="date">AUGust 13, 2021 </div>
+        {% for i in data %}
+            <hr>
+            <div class="all">
+                <div class="card">
+                    <div class="text">
+                        <div class="row">
+                            <div class="tools"><p class="tool-name">Design tools</p></div>
+                            <div class="date">{{i.create_time|date}}</div>
+                        </div>
+                        <p class="heading">{{i.name}}</p>
+                        <h5 class="content">{{i.text}}</h5>
                     </div>
-                    <p class="heading">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</p>
-                    <h5 class="content">Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</h5>
+                    <img src="{% static 'images/img.png' %}" alt="images">
                 </div>
-                <img src="../images/img.png" alt="images">
             </div>
-        </div>
-        <hr>
-        <div class="all">
-            <div class="card">
-                <div class="text">
-                    <div class="row">
-                        <div class="tools"><p class="tool-name">Design tools</p></div>
-                        <div class="date">AUGust 13, 2021 </div>
-                    </div>
-                    <p class="heading">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</p>
-                    <h5 class="content">Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</h5>
-                </div>
-                <img src="../images/img.png" alt="images">
-            </div>
-        </div>
-        <hr>
-        <div class="all">
-            <div class="card">
-                <div class="text">
-                    <div class="row">
-                        <div class="tools"><p class="tool-name">Design tools</p></div>
-                        <div class="date">AUGust 13, 2021 </div>
-                    </div>
-                    <p class="heading">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</p>
-                    <h5 class="content">Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</h5>
-                </div>
-                <img src="../images/img.png" alt="images">
-            </div>
-        </div>
-        <hr>
+        {% endfor %}
+        
     </section>
 </body>
 </html>
