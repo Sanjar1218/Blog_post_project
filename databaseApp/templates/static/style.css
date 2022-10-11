@@ -1,0 +1,129 @@
+@font-face {
+    font-family: graphik;
+    src: url('../fonts/Graphik-Font-Family/GraphikMedium.otf');
+}
+
+
+body {
+    padding: 30px;
+    font-family: graphik;
+}
+
+header {
+    padding: 10px;
+    height: 455px;
+    border-radius: 10px;
+    background-color: #232E52;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.unlist {
+    list-style-type: none;
+    color: white;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 108px;
+    height: 36px;
+    left: 1262px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.title {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-title {
+    width: 90%;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+}
+
+.name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+section {
+    justify-content: center;
+}
+
+.all {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    align-items: center; 
+}
+
+.tools p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.tools {
+    background: #EBF2FE;
+    border-radius: 6px 0px 0px 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px 10px;
+    gap: 10px;
+}
+
+.date {
+    padding-left: 20px;
+    font-size: 13px;
+}
+
+.heading {
+    font-size: 28px;
+    line-height: 130%;
+}
+
+.content {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+img {
+    padding-left: 40px;
+}

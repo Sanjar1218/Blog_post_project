@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import User, Post
 
 def home(request):
-    return render(request, 'home.html')
+    data = User.objects.all()
+    return render(request, 'pages/home.html', context={'data': data})
